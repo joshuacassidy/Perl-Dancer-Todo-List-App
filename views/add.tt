@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="card-panel">
+    <form action="/add" method="post">
+        <label for="title">Todo</label>
+        <input type="text" name="title" />
+        <button class="btn waves-effect waves-light" type="submit" name="action">
+          Add Todo
+          <i class="material-icons right">send</i>
+        </button>
+      </form>
+    </div>
+  </div>

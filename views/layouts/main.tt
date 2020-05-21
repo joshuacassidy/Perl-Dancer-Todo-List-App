@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="<% settings.charset %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title><% title %></title>
+  
+  <script src="https://use.fontawesome.com/fe6101e3a9.js"></script>
+  <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <link rel="stylesheet" href="<% request.uri_base %>/css/style.css">
+
+</head>
+<body>
+
+  <nav>
+    <div class="nav-wrapper teal">
+      <div class="container">
+        <a href="/" class="brand-logo">Todo List</a>
+        <% IF title == "Pending Todos" %>
+        <a href="/add" class="right-align">
+          <i class="material-icons">add</i>    
+      </a>
+      <% END %>
+      </div>
+    </div>
+  </nav>
+
+
+  <header class="header">
+    <div class="container center-align">
+      <h1><% title %></h1>
+    </div>
+
+
+  </header>
+
+<% content %>
+
+</body>
+</html>

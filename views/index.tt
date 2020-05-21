@@ -1,0 +1,51 @@
+<div class="container">
+    <% FOREACH item IN results %>
+        <% IF item.status == 0 %>
+        <ul class="collection with-header">
+            <li class="collection-header grey lighten-4">
+                <h4>
+                    <% item.title %>
+                    <div class="right">
+                        
+                        <a href="/update/<% item.id %>" class="btn-floating">
+                            <i class="material-icons">create</i>
+                        </a>
+                        <a href="/delete/<% item.id %>" class="btn-floating">
+                            <i class="material-icons">delete</i>
+                        </a>
+                    </div>
+                </h4>
+            </li>
+        </ul>
+        <% END %>
+    <% END %>
+</div>
+<header class="header">
+    <div class="container center-align">
+        <h1>Completed Todos</h1>
+    </div>
+
+</header>
+
+
+<div class="container">
+    <% FOREACH item IN results %>
+        <% IF item.status == 1 %>
+        <ul class="collection with-header">
+            <li class="collection-header grey lighten-4">
+                <h4>
+                    <del><% item.title %></del>
+                    <div class="right">
+                        <a href="/update/<% item.id %>" class="btn-floating">
+                            <i class="material-icons">create</i>
+                        </a>
+                        <a href="/delete/<% item.id %>" class="btn-floating">
+                            <i class="material-icons">delete</i>
+                        </a>
+                    </div>
+                </h4>
+            </li>
+        </ul>
+        <% END %>
+    <% END %>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card-panel">
+        <form action="/update/<% id %>" method="post">
+            <input type="hidden" name="id" value="<% id %>" />
+            <label for="title">Todo</label>
+            <input type="text" name="title" value="<% todo_title %>" />
+
+            <% IF status %>
+            <div class="right-align">
+                <input type="checkbox" id="status"  checked> 
+                <label for="status" name="status">Status</label>
+            </div>
+
+            <% ELSE %>
+            <div class="right-align">
+                <input type="checkbox" id="status" name="status">
+                <label for="status"  >Status</label>
+            </div>
+            <% END %>
+
+            <button class="btn waves-effect waves-light" type="submit" name="action">
+                Update Todo
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
+</div>
